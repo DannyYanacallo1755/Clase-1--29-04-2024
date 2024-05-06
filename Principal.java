@@ -13,10 +13,15 @@ public class Principal {
         Thread t1 = new Thread(h1);
         Thread t2 = new Thread(h2);
 
-        // Iniciar la ejecución de los hilos t1 y t2
-        t1.start();
-        t2.start();
-
+        try {
+            t1.start();
+            t1.join(); // Esperar a que hilo1 termine
+            t2.start();
+            t2.join(); // Esperar a que hilo2 termine
+        } catch (InterruptedException exception) {
+            Logger.getLogger(null);
+        }
+      
         System.out.println("Principal");
         
     }

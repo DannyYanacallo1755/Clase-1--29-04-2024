@@ -12,8 +12,13 @@ public class HilosRun implements Runnable {
         // Dependiendo del tipo, el hilo realizará diferentes tareas.
         switch(tipo) {
             case 1 -> {
-                for(int i = 1; i < 30; i++) {
+                for(int i = 1; i < 15; i++) {
                     System.out.println(i); // Imprimir números del 1 al 29
+                }
+            }
+            case 2 -> {
+                for(char a = 'a'; a <= 'y'; a++) {
+                    System.out.println(a); 
                 }
             }
 
